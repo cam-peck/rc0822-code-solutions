@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 30%;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-third {
+  width: calc(100% / 3);
+}
+
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
