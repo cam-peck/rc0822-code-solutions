@@ -14,6 +14,23 @@ p {
   margin-top: 0;
 }
 
+button {
+  color: #d14c45;
+  background-color: white;
+  border: 2px solid #d14c45;
+  padding: 10px 40px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(231 231 231);
+}
+
+img {
+  width: 140px;
+  height: 140px;
+}
+
 .row {
   display: flex;
 }
@@ -47,7 +64,7 @@ p {
   width: 85.7%;
 }
 
-.col-7 {
+.column-full {
   width: 100%;
 }
 
@@ -77,11 +94,12 @@ p {
   padding-bottom: 60px;
 }
 
-.space-between {
-  justify-content: space-between;
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.flex-end {
-  justify-content: flex-end;
-  align-items: flex-end;
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
 }
