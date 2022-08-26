@@ -1,0 +1,105 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin-top: 0;
+}
+
+button {
+  color: #d14c45;
+  background-color: white;
+  border: 2px solid #d14c45;
+  padding: 10px 40px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(231 231 231);
+}
+
+img {
+  width: 140px;
+  height: 140px;
+}
+
+.row {
+  display: flex;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  width: 14.28%;
+}
+
+.col-2 {
+  width: 28.57%;
+}
+
+.col-3 {
+  width: 42.86%;
+}
+
+.col-4 {
+  width: 57.14%;
+}
+
+.col-5 {
+  width: 71.42%;
+}
+
+.col-6 {
+  width: 85.7%;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shrink-text-60 {
+  width: 60%;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}
