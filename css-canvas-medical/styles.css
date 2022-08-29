@@ -139,6 +139,10 @@ nav {
   transform-origin: 0 0;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .font-tiempos {
   font-family: "Tiempos Headline", sans-serif;
 }
@@ -203,11 +207,21 @@ nav {
   border: none;
 }
 
-.hero-img {
+.hero-img-home {
   height: 530px;
   width: 985px;
   margin-top: 60px;
   background-image: url("images/hero.jpg");
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.hero-img-about-us {
+  height: 530px;
+  width: 985px;
+  margin-top: 60px;
+  background-image: url("images/about-us/about-us-header.jpg");
   background-size: cover;
   z-index: 0;
   position: relative;
@@ -234,10 +248,29 @@ nav {
   font-weight: normal;
 }
 
+.overlay-title-about-us {
+  color: white;
+  font-size: 32px;
+  line-height: 1.25;
+  top: 150px;
+  left: 70px;
+  font-weight: normal;
+}
+
 .overlay-text-content {
   color: white;
   width: 40%;
   top: 160px;
+  left: 70px;
+  line-height: 1.75;
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+}
+
+.overlay-text-content-about-us {
+  color: white;
+  width: 46%;
+  top: 260px;
   left: 70px;
   line-height: 1.75;
   font-family: Avenir, sans-serif;
