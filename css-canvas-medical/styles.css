@@ -1,0 +1,264 @@
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #a0a0a0;
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-45 {
+  width: 45%;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-90 {
+  width: 90%;
+}
+
+.row {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-start-and-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.remove-bullet {
+  list-style: none;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.gap-150 {
+  gap: 150px;
+}
+
+.pb-15 {
+  padding-bottom: 15px;
+}
+
+.pb-25 {
+  padding-bottom: 25px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-15 {
+  margin-bottom: 10px;
+}
+
+.mtb-30 {
+  margin: 30px 0;
+}
+
+.shrink-50 {
+  width: 50%;
+}
+
+.center-and-space {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line-height-add-three-quarter {
+  line-height: 1.75;
+}
+
+.line-height-add-one-half {
+  line-height: 1.5;
+}
+
+.lightgray-bg {
+  background-color: rgb(250 250 250);
+}
+
+.text-format {
+  font-weight: 400;
+  transform: scaleY(1.05);
+  transform-origin: 0 0;
+}
+
+.font-tiempos {
+  font-family: "Tiempos Headline", sans-serif;
+}
+
+.font-avenir {
+  font-family: Avenir, sans-serif;
+}
+
+.dark-blue {
+  color: #0a4265;
+}
+
+.soft-gray {
+  color: #6e6e6e;
+}
+
+.dark-gray-bg {
+  background-color: #525351;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-38 {
+  font-size: 38px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-16 {
+  font-size: 16px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.contact-us-btn {
+  padding: 10px;
+  background-color: #294464;
+  color: white;
+  border: 1px solid #294464;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+.header-hr {
+  margin-top: 0;
+  height: 1px;
+  background-color: rgb(221 221 221);
+  border: none;
+}
+
+.hero-img {
+  height: 530px;
+  width: 985px;
+  margin-top: 60px;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: 1;
+}
+
+.gray-overlay {
+  background-color: rgb(0 0 0 / 25%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-title {
+  color: white;
+  font-size: 32px;
+  line-height: 1.25;
+  top: 50px;
+  left: 70px;
+  font-weight: normal;
+}
+
+.overlay-text-content {
+  color: white;
+  width: 40%;
+  top: 160px;
+  left: 70px;
+  line-height: 1.75;
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+}
+
+.get-started-btn {
+  background-color: #294464;
+  color: white;
+  padding: 15px 45px;
+  border: 1px solid #294464;
+  border-radius: 3px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+}
+
+.position-gs-btn {
+  top: 400px;
+  left: 70px;
+}
+
+.get-started-btn:hover {
+  color: rgb(221 219 219);
+}
