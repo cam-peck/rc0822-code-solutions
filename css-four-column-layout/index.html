@@ -6,45 +6,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Four Column Layout</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="container">
-    <header class="row">
+  <div class="container soft-gray-bg text-barlow">
+
+    <header class="row justify-center">
       <div class="column-full">
-        <h2>How it Works</h2>
+        <h2 class="text-extra-bold">How it Works</h2>
       </div>
     </header>
 
-    <main class="row">
+    <main class="row justify-center text-center">
       <div class="column-fifth">
-        <img src="" alt="app-switching-phone">
-        <img src="" alt="app-switching-logo">
-        <p>App Switching</p>
-        <p>Toggles all your apps on and off</p>
+        <img class="phone-img" src="images/screen-1.png" alt="app-switching-phone">
+        <img class="icon-img" src="images/switch-icon.png" alt="app-switching-logo">
+        <p class="text-bold text-14">App Switching</p>
+        <p class="text-12">Toggles all your apps on and off</p>
       </div>
 
       <div class="column-fifth">
-        <img src="" alt="trip-filtering-phone">
-        <img src="" alt="trip-filtering-logo">
-        <p>Trip Filtering</p>
-        <p>Evaluates your trip requests</p>
+        <img class="phone-img" src="images/screen-2.png" alt="trip-filtering-phone">
+        <img class="icon-img" src="images/filter-icon.png" alt="trip-filtering-logo">
+        <p class="text-bold text-14">Trip Filtering</p>
+        <p class="text-12">Evaluates your trip requests</p>
       </div>
 
       <div class="column-fifth">
-        <img src="" alt="service-filters-phone">
-        <img src="" alt="service-filters-logo">
-        <p>Service Filters</p>
-        <p>Accepts only your ideal trips</p>
+        <img class="phone-img" src="images/screen-3.png" alt="service-filters-phone">
+        <img class="icon-img" src="images/slider-icon.png" alt="service-filters-logo">
+        <p class="text-bold text-14">Service Filters</p>
+        <p class="text-12">Accepts only your ideal trips</p>
       </div>
 
       <div class="column-fifth">
-        <img src="" alt="stats-milage-phone">
-        <img src="" alt="stats-milage-logo">
-        <p>Stats + Milage</p>
-        <p>Tracks your trips across all apps</p>
+        <img class="phone-img" src="images/screen-4.png" alt="stats-milage-phone">
+        <img class="icon-img" src="images/bars-icon.png" alt="stats-milage-logo">
+        <p class="text-bold text-14">Stats + Milage</p>
+        <p class="text-12">Tracks your trips across all apps</p>
       </div>
+
     </main>
+
   </div>
 </body>
 </html>
