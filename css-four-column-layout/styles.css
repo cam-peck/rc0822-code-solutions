@@ -16,6 +16,14 @@ p {
   padding: 0 100px 10px;
 }
 
+.column-full {
+  width: 100%;
+}
+
+.column-fourth {
+  width: 25%;
+}
+
 .row {
   display: flex;
 }
@@ -39,6 +47,10 @@ p {
 
 .text-barlow {
   font-family: Barlow, sans-serif;
+}
+
+.text-20 {
+  font-size: 20px;
 }
 
 .text-14 {
