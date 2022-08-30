@@ -20,8 +20,16 @@ nav {
   width: 45%;
 }
 
+.column-25 {
+  width: 25%;
+}
+
 .column-half {
   width: 50%;
+}
+
+.column-55 {
+  width: 55%;
 }
 
 .column-90 {
@@ -102,6 +110,10 @@ nav {
 
 .mb-15 {
   margin-bottom: 10px;
+}
+
+.mb-25 {
+  margin-bottom: 25px;
 }
 
 .mtb-30 {
@@ -294,4 +306,15 @@ nav {
 
 .get-started-btn:hover {
   color: rgb(221 219 219);
+}
+
+.team-img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+
+.team-card {
+  width: 300px;
 }
