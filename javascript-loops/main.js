@@ -16,6 +16,16 @@ function getNumbersToTen() {
   return numbers;
 }
 
+function getEvenNumbersToTwenty() {
+  var evenNumbers = [];
+  var currentNumber = 2;
+  while (currentNumber <= 20) {
+    evenNumbers.push(currentNumber);
+    currentNumber += 2;
+  }
+  return evenNumbers;
+}
+
 function repeatWord(word, times) {
   var count = 1;
   var repeated = '';
