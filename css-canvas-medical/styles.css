@@ -28,8 +28,16 @@ nav {
   width: 50%;
 }
 
+.column-third {
+  width: calc(100% / 3);
+}
+
 .column-55 {
   width: 55%;
+}
+
+.column-60 {
+  width: 60%;
 }
 
 .column-90 {
