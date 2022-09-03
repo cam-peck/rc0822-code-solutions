@@ -96,6 +96,10 @@ a:visited {
   list-style: none;
 }
 
+.gap-30 {
+  gap: 30px;
+}
+
 .gap-50 {
   gap: 50px;
 }
@@ -350,16 +354,42 @@ a:visited {
   outline: 0;
   width: 500px;
   height: 50px;
-  font-size: 28px;
-  margin: 30px 0;
+  font-size: 24px;
+  margin: 30px 0 45px;
+  border-color: lightgray;
 }
 
-.email-input:focus {
-  outline: none !important;
-  background-color: white;
+.email-input::placeholder {
+  color: lightgray;
+  font-family: Avenir, sans-serif;
 }
 
-.email-input::after {
-  outline: none !important;
-  background-color: white;
+.email-input::placeholder::content {
+  color: black;
+}
+
+.blog-card {
+  flex-basis: 40%;
+}
+
+.blog-card h1 {
+  font-family: "Tiempos Headline", sans-serif;
+  color: #0a4e7e;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  font-weight: normal;
+}
+
+.blog-card p {
+  margin-top: 0;
+  color: #6e6e6e;
+  font-family: Avenir, sans-serif;
+}
+
+.blog-card img {
+  height: 250px;
+  width: 400px;
 }
