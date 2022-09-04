@@ -390,6 +390,7 @@ a:visited {
 }
 
 .blog-card img {
+  object-fit: cover;
+  width: 450px;
   height: 250px;
-  width: 400px;
 }
