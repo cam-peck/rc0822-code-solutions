@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  padding-top: 20px;
+  font-size: 28px;
+  font-family: Calibri, sans-serif;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.open-modal {
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 15px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px lightgray;
+}
+
+.open-modal:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 80%);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 500px;
+  text-align: center;
+}
+
+.close-modal {
+  color: white;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px lightgray;
+  margin-bottom: 20px;
+}
+
+.close-modal:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
