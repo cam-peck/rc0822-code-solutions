@@ -7,7 +7,7 @@ $hotButton.addEventListener('click', handleClick);
 
 function handleClick(event) {
   counter++;
-  $hotButton.className = 'hot-button';
+  $hotButton.className = 'hot-button'; // always add hot-btn class
   if (counter < 4) {
     $hotButton.className += ' cold';
   } else if (counter < 7) {
