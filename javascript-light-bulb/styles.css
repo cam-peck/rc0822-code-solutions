@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.dot {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+}
+
+.tan {
+  background-color: #f5ebe4;
+}
+
+.dark-gray {
+  background-color: #141414;
+}
+
+.light-btn {
+  background-color: #fcf683;
+  box-shadow: 0 0 20px #f7f257;
+}
+
+.dark-btn {
+  background-color: #222226;
+  box-shadow: 0 -20px 10px black;
+}
