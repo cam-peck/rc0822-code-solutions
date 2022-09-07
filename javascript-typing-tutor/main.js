@@ -15,32 +15,40 @@ for (let i = 0; i < currentSentence.length; i++) {
   $sentenceHolder.appendChild(node);
 }
 
-getSentence();
-
 // User-typing interactivity
 
 var $sentenceNodes = document.querySelectorAll('span');
-var $perfectScore = document.querySelector('.perfect-score');
-// var $currentScore = document.querySelector('.current-score');
-// var incorrectCounter = 0;
+var $accuracyPerc = document.querySelector('.accuracy');
+var $replayBtn = document.querySelector('.replay-btn');
+var incorrectCounter = 0;
 var perfectScore = $sentenceNodes.length - 1;
 
-$perfectScore.textContent = `Perfect Score: ${perfectScore}`;
 $sentenceNodes[0].classList.toggle('underline'); // initial underline
 var i = 0;
 
-document.addEventListener('keydown', function (event) {
-  if (i >= perfectScore) {
-    // var finalScore = Math.floor(((perfectScore - incorrectCounter) / perfectScore) * 100);
-    // console.log('You finished! You were', finalScore, '% accurate!');
-  }
-  if (event.key === $sentenceNodes[i].textContent) {
-    $sentenceNodes[i].classList.toggle('underline');
-    $sentenceNodes[i].className = ('success');
-    i++;
-    $sentenceNodes[i].classList.toggle('underline');
-  } else {
-    $sentenceNodes[i].className = 'failure underline';
-    // incorrectCounter++;
-  }
+$replayBtn.addEventListener('click', function (event) {
+  getSentence();
+  playRound();
 });
+
+function playRound() {
+  getSentence();
+  document.addEventListener('keydown', function (event) {
+    if (i >= perfectScore) {
+      $replayBtn.classList.toggle('display-none');
+      var finalScore = Math.floor(((perfectScore - incorrectCounter) / perfectScore) * 100);
+      $accuracyPerc.textContent = `Accuracy: ${finalScore}%`;
+    }
+    if (event.key === $sentenceNodes[i].textContent) {
+      $sentenceNodes[i].classList.toggle('underline');
+      $sentenceNodes[i].className = ('success');
+      i++;
+      $sentenceNodes[i].classList.toggle('underline');
+    } else {
+      $sentenceNodes[i].className = 'failure underline';
+      incorrectCounter++;
+    }
+  });
+}
+
+playRound();
