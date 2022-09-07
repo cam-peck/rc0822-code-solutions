@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CSS Challenge - Canvas Medical</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
@@ -27,46 +27,48 @@
       </div>
     </header>
 
-    <hr class="header-hr column-full"/>
+    <hr class="header-hr column-full" />
 
-    <section class="row justify-center pb-60">
-      <div class="hero-img-home">
-        <div class="gray-overlay"></div>
-        <h1 class="hero-overlay overlay-title">The EMR Reimagined for <br /> Primary Care</h1>
-        <p class="hero-overlay overlay-text-content">
-          Can't remember the last time you talked with a patient wihtout focusing on the EMR?
-          Canvas lets you rediscover joy in the work you do. Capture meaninful data,
-          identify gaps in care, and move seamlessly between tasks within the platform.
-          You stay present with patients while your whole care team stays up-to-speed. Be a
-          better doctor with Canvas, designed for primary care providors with the help of
-          primary care care providers.
-        </p>
-        <button class="hero-overlay get-started-btn position-gs-btn">Get Started</button>
+    <section class="row text-center pb-60">
+      <div class="column-full">
+        <h1 class="soft-gray text-32 font-tiempos mt-100">Canvas Medical News and Insights</h1>
+        <p class="font-avenir soft-gray mt-0">Subscribe for updates, data, and essays on American primary care</p>
+        <form action="" method="GET">
+          <div>
+            <label for="email"></label>
+            <input class="text-center email-input" type="text" name="email" id="email" placeholder="Enter your email address" required>
+          </div>
+          <div>
+            <button class="get-started-btn" type="submit">Subscribe</button>
+          </div>
+        </form>
       </div>
     </section>
 
-    <section class="lightgray-bg">
-      <div class="row justify-center flex-column pt-60">
-        <h1 class="text-format text-32 soft-gray font-tiempos mb-15">Clinicians Prefer Canvas</h1>
-        <p class="shrink-50 center-and-space mt-0 pb-60 text-format font-avenir text-16 soft-gray line-height-add-three-quarter">
-          Physician-owned primary care practices across the country have
-          already made Canvas the fabric of their care.
-        </p>
-      </div>
-      <div class="row pb-60">
-        <div class="column-half justify-center text-center">
-          <ul class="remove-bullet text-format soft-gray text-20 font-avenir">
-            <li class="pb-25">Cascade Family Practice, Portland OR</li>
-            <li class="pb-25">Temescal Creek Medicine, Oakland CA</li>
-            <li>San Juan Healthcare, Friday Harbor WA</li>
-          </ul>
+    <section class="pb-60">
+      <div class="row justify-center gap-30 mb-25">
+        <div class="blog-card">
+          <img src="images/blog/blog-1.jpg" alt="article-1">
+          <h1>The Crucial Role of Primary Care in Creating a Workable Health for All Americans</h1>
+          <p>August 14, 2018 by Julian Malinak</p>
         </div>
-        <div class="column-half justify-center text-center">
-          <ul class="remove-bullet text-format soft-gray text-20 font-avenir">
-            <li class="pb-25">Ward Medical Clinic, Bonifay FL</li>
-            <li class="pb-25">Caribou Medical, Towanda PA</li>
-            <li>Bay Tree Family Care, Red Bay AL</li>
-          </ul>
+        <div class="blog-card">
+          <img src="images/blog/blog-2.jpg" alt="article-2">
+          <h1>Independent Primary Care: <br />Getting More Value for the <br />Healthcare Dollar</h1>
+          <p>June 19, 2018 by Julian Malinak</p>
+        </div>
+      </div>
+
+      <div class="row justify-center mb-25 gap-30">
+        <div class="blog-card">
+          <img src="images/blog/blog-3.jpg" alt="article-3">
+          <h1>Mending the Fabric of Primary <br /> Care</h1>
+          <p>March 27, 2018 by Andrew Hines</p>
+        </div>
+        <div class="blog-card">
+          <img src="images/blog/blog-4.png" alt="article-4">
+          <h1>Launching the Primary Care <br /> Platform</h1>
+          <p>March 27, 2018 by Julian Malinak</p>
         </div>
       </div>
     </section>
