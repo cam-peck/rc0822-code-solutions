@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+p {
+  font-family: "Courier Prime", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.success {
+  color: chartreuse;
+}
+
+.failure {
+  color: firebrick;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.underline {
+  border-bottom: 5px solid black;
+  padding-bottom: 2px;
+}
