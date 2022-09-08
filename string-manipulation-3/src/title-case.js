@@ -1,5 +1,4 @@
 /* exported titleCase */
-// weird colon case needs fixed... (REEE!)
 function titleCase(title) {
   var splitTitle = title.split(' ');
   var output = '';
