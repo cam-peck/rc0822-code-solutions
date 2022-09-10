@@ -7,6 +7,14 @@ nav {
   font-size: 14px;
 }
 
+button:hover {
+  color: lightgray;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
 a:link {
   text-decoration: none;
 }
@@ -423,4 +431,14 @@ a:visited {
   object-fit: cover;
   width: 450px;
   height: 250px;
+}
+
+.submit-btn {
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: #294464;
+  color: white;
+  border: 1px solid #294464;
+  border-radius: 3px;
+  margin-top: 0;
 }
