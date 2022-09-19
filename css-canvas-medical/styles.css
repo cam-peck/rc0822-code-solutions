@@ -7,6 +7,14 @@ nav {
   font-size: 14px;
 }
 
+button:hover {
+  color: lightgray;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
 a:link {
   text-decoration: none;
 }
@@ -183,6 +191,10 @@ a:visited {
   font-weight: bold;
 }
 
+.weight-normal {
+  font-weight: normal;
+}
+
 .font-tiempos {
   font-family: "Tiempos Headline", sans-serif;
 }
@@ -213,6 +225,10 @@ a:visited {
 
 .text-32 {
   font-size: 32px;
+}
+
+.font-26 {
+  font-size: 26px;
 }
 
 .text-20 {
@@ -368,6 +384,28 @@ a:visited {
   color: black;
 }
 
+.contact-us-input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-bottom: 10px;
+  outline: 0;
+  width: 450px;
+  height: 35px;
+  font-size: 18px;
+  margin: 10px 0 45px;
+  border-color: lightgray;
+}
+
+.contact-us-input::placeholder {
+  color: lightgray;
+  font-family: Avenir, sans-serif;
+}
+
+.contact-us-input::placeholder::content {
+  color: black;
+}
+
 .blog-card {
   flex-basis: 40%;
 }
@@ -393,4 +431,14 @@ a:visited {
   object-fit: cover;
   width: 450px;
   height: 250px;
+}
+
+.submit-btn {
+  font-size: 14px;
+  padding: 10px 15px;
+  background-color: #294464;
+  color: white;
+  border: 1px solid #294464;
+  border-radius: 3px;
+  margin-top: 0;
 }
