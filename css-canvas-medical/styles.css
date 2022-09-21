@@ -116,12 +116,20 @@ a:visited {
   gap: 150px;
 }
 
+.pl-5 {
+  padding-left: 5px;
+}
+
 .pb-15 {
   padding-bottom: 15px;
 }
 
 .pb-25 {
   padding-bottom: 25px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
 }
 
 .pb-60 {
@@ -283,6 +291,16 @@ a:visited {
   position: relative;
 }
 
+.hero-img-implementation {
+  height: 530px;
+  width: 985px;
+  margin-top: 60px;
+  background-image: url("images/implementation/implementation-header.jpg");
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+}
+
 .hero-overlay {
   position: absolute;
   z-index: 1;
@@ -313,6 +331,15 @@ a:visited {
   font-weight: normal;
 }
 
+.overlay-title-implementation {
+  color: white;
+  font-size: 32px;
+  line-height: 1.25;
+  top: 100px;
+  left: 70px;
+  font-weight: normal;
+}
+
 .overlay-text-content {
   color: white;
   width: 40%;
@@ -327,6 +354,16 @@ a:visited {
   color: white;
   width: 46%;
   top: 260px;
+  left: 70px;
+  line-height: 1.75;
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+}
+
+.overlay-text-content-implementation {
+  color: white;
+  width: 46%;
+  top: 250px;
   left: 70px;
   line-height: 1.75;
   font-family: Avenir, sans-serif;
@@ -441,4 +478,12 @@ a:visited {
   border: 1px solid #294464;
   border-radius: 3px;
   margin-top: 0;
+}
+
+.number-header {
+  font-size: 2rem;
+}
+
+.number-text {
+  font-size: 1.25rem;
 }
