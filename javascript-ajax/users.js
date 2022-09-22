@@ -1,5 +1,4 @@
 var $userList = document.querySelector('#user-list');
-console.log($userList);
 
 function getUserData() {
   var xhr = new XMLHttpRequest();
