@@ -85,6 +85,10 @@ a:visited {
   align-items: center;
 }
 
+.justify-center-no-align {
+  justify-content: center;
+}
+
 .space-between {
   justify-content: space-between;
   align-items: center;
@@ -128,6 +132,10 @@ a:visited {
   padding-bottom: 25px;
 }
 
+.ptb-5 {
+  padding: 5px 0;
+}
+
 .pb-40 {
   padding-bottom: 40px;
 }
@@ -162,6 +170,14 @@ a:visited {
 
 .mtb-30 {
   margin: 30px 0;
+}
+
+.pr-50 {
+  padding-right: 50px;
+}
+
+.pl-50 {
+  padding-left: 50px;
 }
 
 .shrink-50 {
@@ -235,6 +251,10 @@ a:visited {
   font-size: 32px;
 }
 
+.text-28 {
+  font-size: 28px;
+}
+
 .font-26 {
   font-size: 26px;
 }
@@ -253,6 +273,10 @@ a:visited {
 
 .text-12 {
   font-size: 12px;
+}
+
+.style-italics {
+  font-style: italic;
 }
 
 .contact-us-btn {
@@ -301,6 +325,16 @@ a:visited {
   position: relative;
 }
 
+.hero-img-product {
+  height: 500px;
+  width: 985px;
+  margin-top: 60px;
+  background-image: url("images/product/product-header.jpg");
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+}
+
 .hero-overlay {
   position: absolute;
   z-index: 1;
@@ -340,6 +374,15 @@ a:visited {
   font-weight: normal;
 }
 
+.overlay-title-product {
+  color: white;
+  font-size: 32px;
+  line-height: 1.25;
+  top: 130px;
+  left: 70px;
+  font-weight: normal;
+}
+
 .overlay-text-content {
   color: white;
   width: 40%;
@@ -361,6 +404,16 @@ a:visited {
 }
 
 .overlay-text-content-implementation {
+  color: white;
+  width: 46%;
+  top: 250px;
+  left: 70px;
+  line-height: 1.75;
+  font-family: Avenir, sans-serif;
+  font-size: 14px;
+}
+
+.overlay-text-content-product {
   color: white;
   width: 46%;
   top: 250px;
@@ -486,4 +539,12 @@ a:visited {
 
 .number-text {
   font-size: 1.25rem;
+}
+
+.product-img {
+  object-fit: contain;
+}
+
+.canvas-logo {
+  width: 125px;
 }
