@@ -1,0 +1,95 @@
+    1  git branch es6-const-let
+    2  git switch es6-const-let 
+    3  git add es6-const-let/
+    4  git commit -m "complete es6-const-let exercise"
+    5  git push origin es6-const-let 
+    6  git switch main
+    7  git branch es-6-template-literals
+    8  git branch es6-template-literals
+    9  git switch es6-template-literals 
+   10  git add es6-template-literals/
+   11  git commit -m "complete es6-template-literals exercise"
+   12  git push origin es6-template-literals 
+   13  git switch main
+   14  git pull origin main
+   15  git pull origin main
+   16  git pull origin main
+   17  git branch es6-destructuring
+   18  git switch es6-destructuring 
+   19  git add es6-destructuring/
+   20  git commit -m "complete es6-destructuring exercise"
+   21  git push origin es6-destructuring 
+   22  git switch main
+   23  git pull origin main
+   24  git switch main
+   25  git pull origin main
+   26  git branch command-line-basics
+   27  git switch command-line-basics 
+   28  cd command-line-basics/
+   29  man man
+   30  man cat
+   31  cat laziness.txt 
+   32  cat impatience.txt 
+   33  cat hubris.txt 
+   34  cat laziness.txt impatience.txt hubris.txt 
+   35  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+   36  cat three-virtues.txt 
+   37  man ls
+   38  ls
+   39  ls -a
+   40  man ls
+   41  ls -a
+   42  ls -F
+   43  ls lfz-staff/
+   44  ls -a lfz-staff/
+   45  ls -F lfz-staff/
+   46  ls -aF lfz-staff/ > lfz-staff/contents.txt
+   47  cat lfz-staff/contents.txt 
+   48  man pwd
+   49  pwd
+   50  pwd > i-was-here.txt
+   51  cat i-was-here.txt 
+   52  ls
+   53  cat i-was-here.txt 
+   54  man echo
+   55  echo Hello, World
+   56  echo 'Hello, World'
+   57  echo 'Hello, World' > hello.txt
+   58  cat hello.txt 
+   59  ls
+   60  ls pwd
+   61  ls
+   62  man touch
+   63  touch tag-youre-it.txt
+   64  cat tag-youre-it.txt 
+   65  touch snoot/boop.txt
+   66  ls snoot/
+   67  man mkdir
+   68  mkdir parent
+   69  ls
+   70  mkdir man
+   71  man mkdir
+   72  mkdir -p parent/child/grandchil
+   73  touch parent/child/grandchild/ .gitkeep
+   74  touch parent/child/grandchild/.gitkeep
+   75  ls -a
+   76  ls -a parent
+   77  ls -a child
+   78  ls -a parent/child/grandchild/
+   79  man mv
+   80  mv pokiemans/ pokemon/
+   81  ls 
+   82  man rm
+   83  rm lol.txt
+   84  ls
+   85  rm -r kill-me/
+   86  ls
+   87  man cp
+   88  man cp
+   89  cp and-then.txt 
+   90  cp and-then.txt no-and-then.txt
+   91  ls
+   92  cat and-then.txt 
+   93  cat no-and-then.txt 
+   94  man history
+   95  history > command-history.txt
