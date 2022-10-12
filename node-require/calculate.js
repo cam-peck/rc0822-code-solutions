@@ -27,15 +27,16 @@ for (const key in operationsObj) { // check operations object and evaluate resul
   }
 }
 
-if (isNaN(num1) || isNaN(num2)) {
+if (isNaN(num1) || isNaN(num2)) { // check for integer errors
   console.log('One (or both) of your inputs is not an integer.');
   errorFound = true;
 }
-if (!Object.keys(operationsObj).includes(operator)) {
+
+if (!Object.keys(operationsObj).includes(operator)) { // check for operation errors
   console.log(`The operation "${operator}" does not exist. Current operations are ${Object.keys(operationsObj)}.`); // operation not in operation object
   errorFound = true;
 }
 
-if (errorFound === false) {
+if (errorFound === false) { // if no errors, print result
   console.log(`Result: ${result}`);
 }
