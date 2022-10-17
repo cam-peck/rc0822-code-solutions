@@ -32,10 +32,10 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.delete('/api/grades/:id', (req, res) => {
-  if (grades[req.params.id]) {
+  if (grades[req.params.id]) { // if gradeID exists, delete it and send 204 success
     delete grades[req.params.id];
     res.sendStatus(204);
-  } else {
+  } else { // if gradeID doesn't exist, send 404 error
     res.sendStatus(404);
   }
 });
