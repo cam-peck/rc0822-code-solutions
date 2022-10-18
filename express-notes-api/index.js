@@ -33,6 +33,7 @@ app.post('/api/notes', (req, res) => {
     data.notes[data.nextId].id = data.nextId;
     data.nextId++;
     overwriteJSON(data, res);
+    res.status(201).send(data.notes[data.nextId - 1]);
   }
 });
 
@@ -40,6 +41,7 @@ app.delete('/api/notes/:noteId', (req, res) => {
   if (data.notes[req.params.noteId]) {
     delete data.notes[req.params.noteId];
     overwriteJSON(data, res);
+    res.sendStatus(204);
   } else {
     handleParamErrors(req, res);
   }
@@ -50,6 +52,7 @@ app.put('/api/notes/:noteId', (req, res) => {
     if (req.body.content) {
       data.notes[req.params.noteId].content = req.body.content;
       overwriteJSON(data, res);
+      res.send(data.notes[req.params.noteId]);
     } else {
       res.status(400).send('Error: No content attached. Ensure your key name is "content", followed by your desired value.');
     }
@@ -72,8 +75,6 @@ function overwriteJSON(data, res) { // takes data to overwrite current data.json
       // eslint-disable-next-line no-console
       console.error(err);
       res.status(500).send('Error: An unexpected error occured.');
-    } else {
-      res.sendStatus(204);
     }
   });
 }
