@@ -1,0 +1,33 @@
+{
+  "nextId": 20,
+  "notes": {
+    "2": {
+      "id": 2,
+      "content": "The event loop, this, closures, and prototypal inheritance are special about JavaScript."
+    },
+    "5": {
+      "id": 5,
+      "content": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined."
+    },
+    "6": {
+      "id": 6,
+      "content": "Test"
+    },
+    "9": {
+      "id": 9,
+      "content": "Test"
+    },
+    "10": {
+      "content": "Cameron",
+      "id": 10
+    },
+    "14": {
+      "content": "Cameron",
+      "id": 14
+    },
+    "16": {
+      "content": "test",
+      "id": 16
+    }
+  }
+}
