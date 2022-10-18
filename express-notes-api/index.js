@@ -31,7 +31,7 @@ app.post('/api/notes', (req, res) => { // POST requests for a new note
     data.notes[data.nextId].id = data.nextId;
     data.nextId++;
     const newJSON = JSON.stringify(data, null, 2);
-    fs.writeFile('fakePath/data.json', newJSON, 'utf8', err => {
+    fs.writeFile('data.json', newJSON, 'utf8', err => {
       if (err) {
         // eslint-disable-next-line no-console
         console.error(err);
@@ -40,6 +40,26 @@ app.post('/api/notes', (req, res) => { // POST requests for a new note
         res.status(201).send(req.body);
       }
     });
+  }
+});
+
+app.delete('/api/notes/:noteId', (req, res) => {
+  if (data.notes[req.params.noteId]) { // id does exist
+    delete data.notes[req.params.noteId];
+    const newJSON = JSON.stringify(data, null, 2);
+    fs.writeFile('troll/data.json', newJSON, 'utf8', err => {
+      if (err) {
+        // eslint-disable-next-line no-console
+        console.error(err);
+        res.status(500).send('Error: An unexpected error occured.');
+      } else {
+        res.sendStatus(204);
+      }
+    });
+  } else if (!data.notes[req.params.noteId] && isNaN(req.params.noteId)) { // id is not an integer
+    res.status(400).send(`Error: Your id, ${req.params.noteId}, is not a positive integer.`);
+  } else { // id is an integer, but does not exist
+    res.status(404).send(`Error: Your id, ${req.params.noteId}, does not exist.`);
   }
 });
 
