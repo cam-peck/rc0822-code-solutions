@@ -32,16 +32,14 @@ app.post('/api/notes', (req, res) => {
     data.notes[data.nextId] = req.body;
     data.notes[data.nextId].id = data.nextId;
     data.nextId++;
-    overwriteJSON(data, res);
-    res.status(201).send(data.notes[data.nextId - 1]);
+    overwriteJSON(data, res, 'post');
   }
 });
 
 app.delete('/api/notes/:noteId', (req, res) => {
   if (data.notes[req.params.noteId]) {
     delete data.notes[req.params.noteId];
-    overwriteJSON(data, res);
-    res.sendStatus(204);
+    overwriteJSON(data, res, 'delete');
   } else {
     handleParamErrors(req, res);
   }
@@ -51,8 +49,7 @@ app.put('/api/notes/:noteId', (req, res) => {
   if (data.notes[req.params.noteId]) {
     if (req.body.content) {
       data.notes[req.params.noteId].content = req.body.content;
-      overwriteJSON(data, res);
-      res.send(data.notes[req.params.noteId]);
+      overwriteJSON(data, res, 'put', req);
     } else {
       res.status(400).send('Error: No content attached. Ensure your key name is "content", followed by your desired value.');
     }
@@ -68,13 +65,25 @@ app.listen(3000, () => {
 
 // Helper Functions //
 
-function overwriteJSON(data, res) { // takes data to overwrite current data.json file with and rewrites the file
+function overwriteJSON(data, res, requestType, req) { // takes data to overwrite current data.json file with and rewrites the file
   const newJSON = JSON.stringify(data, null, 2);
   fs.writeFile('data.json', newJSON, 'utf8', err => {
     if (err) {
       // eslint-disable-next-line no-console
       console.error(err);
       res.status(500).send('Error: An unexpected error occured.');
+    } else {
+      switch (requestType) {
+        case 'delete':
+          res.sendStatus(204);
+          break;
+        case 'post':
+          res.status(201).send(data.notes[data.nextId - 1]);
+          break;
+        case 'put':
+          res.send(data.notes[req.params.noteId]);
+          break;
+      }
     }
   });
 }
