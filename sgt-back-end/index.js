@@ -94,6 +94,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
   const gradeDeleteId = req.params.gradeId;
   if (!gradeDeleteId || isNaN(Number(gradeDeleteId))) { // gradeId is missing or not a number
     res.status(400).send('Error: Either you did not specify a gradeId to delete, or the gradeId is not a valid integer.');
+    return;
   }
   const sql = `
   DELETE
