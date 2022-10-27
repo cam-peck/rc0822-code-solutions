@@ -1,0 +1,57 @@
+.container {
+  width: 768px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 5rem;
+  font-size: 2rem;
+  border: 3px solid black;
+  box-shadow: 10px 5px 5px black;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(0.1rem);
+}
+
+.btn-black {
+  background-color: #160935;
+  color: white;
+}
+
+.btn-dark-purple {
+  background-color: #351c75;
+  color: white;
+}
+
+.btn-light-purple {
+  background-color: #674ea7;
+  color: white;
+}
+
+.btn-light-red {
+  background-color: #e06666;
+  color: white;
+}
+
+.btn-orange {
+  background-color: #f6b26b;
+  color: black;
+}
+
+.btn-yellow {
+  background-color: #ff0;
+  color: black;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: black;
+}
