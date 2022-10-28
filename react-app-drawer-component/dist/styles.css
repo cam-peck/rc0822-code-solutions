@@ -1,0 +1,77 @@
+.container {
+  width: 100%;
+  transition: background-color ease-in-out 300ms;
+}
+
+.bg-dark,
+.bg-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg-light {
+  background-color: white;
+}
+
+.bg-dark {
+  background-color: darkgray;
+}
+
+.drawer-wrapper {
+  margin: 1.5rem 1rem;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.drawer {
+  transition: left ease-in-out 300ms;
+}
+
+.drawer-open,
+.drawer-closed {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  box-shadow: 1px 5px 5px rgb(63 63 63);
+  background-color: white;
+  z-index: 2;
+}
+
+.drawer-open {
+  top: 0;
+  left: 0;
+}
+
+.drawer-closed {
+  top: 0;
+  left: -260px;
+}
+
+/* Navigation Items */
+
+.nav-wrapper h2 {
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.nav-wrapper li {
+  list-style: none;
+  padding: 1rem;
+  transition: background-color 400ms ease-in-out;
+}
+
+.nav-wrapper li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.nav-wrapper ul {
+  padding: 0;
+  margin: 0;
+}
