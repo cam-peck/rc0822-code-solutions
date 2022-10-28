@@ -1,0 +1,44 @@
+.container {
+  max-width: 768px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.password-container {
+  position: relative;
+}
+
+.validator-x,
+.validator-check {
+  position: absolute;
+  top: 40px;
+  left: 206px;
+}
+
+.validator-x {
+  color: red;
+}
+
+.validator-check {
+  color: green;
+}
+
+.error-message {
+  color: red;
+  margin-top: 0.5rem;
+}
