@@ -23,7 +23,7 @@ export default class ValidatedInput extends React.Component {
         <form action="">
           <div className="password-container">
             <label htmlFor="password">Password</label>
-            <input type="text" name="password" id="password" value={this.state.password} onChange={this.handlePasswordChange }/>
+            <input type="password" name="password" id="password" value={this.state.password} onChange={this.handlePasswordChange }/>
             <p className="error-message">{errorMessage}</p>
             <i className={`fa-solid fa-${validateSymbol} validator-${validateSymbol}`}></i>
           </div>
