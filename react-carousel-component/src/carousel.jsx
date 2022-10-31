@@ -65,23 +65,10 @@ export default class Carousel extends React.Component {
       <div className="container">
         <i className="fa-solid fa-angle-left fa-xl" onClick={this.moveBackward}></i>
         <div className="image-wrapper">
-          < ImageItem imageArray={this.props.imageArray} activeImage={activeImageIndex}/>
+          < RenderImage imageArray={this.props.imageArray} activeImage={activeImageIndex}/>
           < CircleList imageArray={this.props.imageArray} activeCircle={activeImageIndex} onCircleChange={this.handleCircleClick}/>
         </div>
         <i className="fa-solid fa-angle-right fa-xl" onClick={this.moveForward}></i>
-      </div>
-    );
-  }
-}
-
-class ImageItem extends React.Component {
-  render() {
-    const imageArray = this.props.imageArray;
-    const activeImageIndex = this.props.activeImage;
-    const itemToRender = imageArray[activeImageIndex];
-    return (
-      <div>
-        <img src={itemToRender.url} alt="pokemon-img" className="carousel-image image-active"/>
       </div>
     );
   }
@@ -108,7 +95,7 @@ class CircleList extends React.Component {
       } else {
         isActiveBool = false;
       }
-      return < CircleItem key={image.id.toString()} circleIndex={index} active={isActiveBool} onClick={this.handleChange} />;
+      return < RenderCircle key={image.id.toString()} circleIndex={index} active={isActiveBool} onClick={this.handleChange} />;
     });
     return (
       <div className="selectors">
@@ -118,16 +105,25 @@ class CircleList extends React.Component {
   }
 }
 
-class CircleItem extends React.Component {
-  render() {
-    let circleType;
-    if (this.props.active) {
-      circleType = 'fa-solid';
-    } else {
-      circleType = 'fa-regular';
-    }
-    return (
-      <i className={`${circleType} fa-circle`} circleindex={this.props.circleIndex} onClick={this.props.onClick}></i>
-    );
+function RenderImage(props) {
+  const imageArray = props.imageArray;
+  const activeImageIndex = props.activeImage;
+  const itemToRender = imageArray[activeImageIndex];
+  return (
+    <div>
+      <img src={itemToRender.url} alt="pokemon-img" className="carousel-image image-active" />
+    </div>
+  );
+}
+
+function RenderCircle(props) {
+  let circleType;
+  if (props.active) {
+    circleType = 'fa-solid';
+  } else {
+    circleType = 'fa-regular';
   }
+  return (
+    <i className={`${circleType} fa-circle`} circleindex={props.circleIndex} onClick={props.onClick}></i>
+  );
 }
