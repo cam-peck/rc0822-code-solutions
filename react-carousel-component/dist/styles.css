@@ -1,0 +1,40 @@
+.container {
+  max-width: 768px;
+  padding: 2rem;
+  border: 3px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-wrapper {
+  width: 50%;
+}
+
+.image-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+
+.image-inactive {
+  display: none;
+}
+
+.image-active {
+  display: inline;
+}
+
+.carousel-image {
+  width: 100%;
+}
+
+.selectors {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+i:hover {
+  cursor: pointer;
+}
