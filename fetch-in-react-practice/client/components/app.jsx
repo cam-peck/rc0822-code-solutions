@@ -45,29 +45,34 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
+    let indexToChange = null;
     for (let i = 0; i < this.state.todos.length; i++) {
       if (this.state.todos[i].todoId === todoId) {
-        const isCompletedStatus = this.state.todos[i].isCompleted;
-        const flippedCompletedObj = {
-          isCompleted: !isCompletedStatus
-        };
-        fetch(`api/todos/${todoId}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(flippedCompletedObj)
-        }).then(
-          res => res.json()
-        ).then(
-          data => {
-            const previousData = this.state.todos.slice();
-            previousData[i] = data;
-            this.setState({ todos: previousData });
-          }
-        );
+        indexToChange = i;
       }
     }
+    if (indexToChange === null) {
+      return;
+    }
+    const isCompletedStatus = this.state.todos[indexToChange].isCompleted;
+    const flippedCompletedObj = {
+      isCompleted: !isCompletedStatus
+    };
+    fetch(`api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(flippedCompletedObj)
+    }).then(
+      res => res.json()
+    ).then(
+      data => {
+        const previousData = this.state.todos.slice();
+        previousData[indexToChange] = data;
+        this.setState({ todos: previousData });
+      }
+    );
   }
 
   render() {
