@@ -1,0 +1,35 @@
+User can sign up:
+  -- When user clicks `Register now`...
+    -- Welcome message changes because `route.path` is no longer `sign-in`
+    -- The `auth` component then renders the `auth-form` component which toggles the auth form button and text
+      -- As the user enters text into the `username` and `password` fields, their changes are stored in authform's state via handleChange()
+      -- When the user clicks submit, a fetch request is sent to the server (api/auth/sign-up) with the username and password in req.body
+        -- In this route, username and password are destructured from req.body, and the password is hashed
+        -- The username and password are then inserted into the db and the resulting new user is returned
+        -- Assuming there are no errors, the user is then navigated back to the sign-in page
+
+User can sign in --
+  -- This uses the same authform component as above --> any changes into `username` and `password` are picked up by handleChange() and stored in state
+  -- When the user clicks `Log in`, a fetch request is sent to the server (api/auth/sign-in) with the username and password in req.body
+    -- Similar to sign-up, username and password are destrucred from req.body
+    -- A SQL query then looks for the username of the entered user in the database, and if it finds it...
+    -- Argon2's verify method is used check if the password the user entered matches the hashed version in the database (is it the correct password)
+    -- Assuming it matches, we create a token for that user using jwt.sign(), and then send that token back to the front end
+    -- Back in auth-form --> we've got a response --> if the token makes it back (sign-in was successful) we execute onSignIn passing in the signed token
+    -- Looking for onSignIn leads us back up to app.jsx --> we set the returned user token into local storage and the user into state
+
+User can stay signed in --
+  -- When the user refreshes the page or closes the window and returns, the componentDidMount() method is called
+    -- Case token is present:
+      -- We grab the token from local storage, save it in the `token` variable, and then decode it
+      -- We set that decoded token into state in addition to changing isAuthorizing in state to false --> this 'signs-in' the previous user automatically
+    -- Case no token is present:
+      -- We try to grab a token from local storage, but it isn't there (because nobody previously signed in)
+      -- We set the user to null in state and change isAuthorizing to false --> nobody authorized this time around
+
+
+User can sign out --
+  -- When the user clicks the sign-out button from their home page, we look to the navbar and find handleSignOut called on click events
+  -- handleSignOut comes from context, so we jump back upp to app.js to find it
+  -- in handleSignOut, we remove the user from localstorage and set the user in state to null, reloading the page
+  -- when the page reloads, we follow the `Case no token is present` which leads us back to log-in screen
