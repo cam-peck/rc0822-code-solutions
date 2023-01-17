@@ -86,7 +86,46 @@ app.put('/api/grades/:gradeId', async (req, res) => {
   const params = [score, name, course, gradeId]
   try {
     const result = await db.query(sql, params);
-    res.json(result.rows);
+    if (!result.rows[0]) {
+      res.status(404).json({
+        Error: `Grade with id:${gradeId} not found.`
+      });
+      return;
+    }
+    res.json(result.rows[0]);
+  }
+  catch (err) {
+    console.stack(err);
+    res.status(500).send('An unexpected error occured');
+  }
+})
+
+app.delete('/api/grades/:gradeId', async (req, res) => {
+  const { gradeId } = req.params;
+  if (!gradeId || isNaN(Number(gradeId)) || gradeId < 0) {
+    res.status(400).json({
+      Error: 'gradeId is a required parameter and must be a positive number.'
+    });
+    return;
+  };
+  const sql = `
+    DELETE
+      FROM "grades"
+     WHERE "gradeId" = $1
+ RETURNING *;
+  `;
+  const params = [gradeId];
+  try {
+    const result = await db.query(sql, params);
+    if (!result.rows[0]) {
+      res.status(404).json({
+        Error: `Grade with id:${gradeId} not found.`
+      });
+      return;
+    };
+    res.status(204).json({
+      Message: `Entry with id:${gradeId} deleted successfully.`
+    });
   }
   catch (err) {
     console.stack(err);
