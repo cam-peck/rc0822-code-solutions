@@ -56,6 +56,44 @@ app.post('/api/grades', async (req, res) => {
   }
 })
 
+app.put('/api/grades/:gradeId', async (req, res) => {
+  const { gradeId } = req.params;
+  const { name, course, score } = req.body;
+  if (!gradeId || isNaN(Number(gradeId)) || gradeId < 0) {
+    res.status(400).json({
+      Error: 'gradeId is a required parameter and must be a positive number.'
+    });
+    return;
+  };
+  if (!name || !course || !score) {
+    res.status(400).json({
+      Error: 'Name, course, and score are required fields.'
+    });
+    return;
+  };
+  if (typeof score !== 'number' || score < 0) {
+    res.status(400).json({
+      Error: 'Score must be a positive integer.'
+    });
+    return;
+  };
+  const sql = `
+    UPDATE "grades"
+       SET "score" = $1, "name" = $2, "course" = $3
+     WHERE "gradeId" = $4
+ RETURNING *;
+  `;
+  const params = [score, name, course, gradeId]
+  try {
+    const result = await db.query(sql, params);
+    res.json(result.rows);
+  }
+  catch (err) {
+    console.stack(err);
+    res.status(500).send('An unexpected error occured');
+  }
+})
+
 app.listen(3000, () => {
   console.log('listening on Port 3000');
 });
