@@ -11,7 +11,7 @@ const db = new pg.Pool({
 
 app.use(express.json());
 
-app.get('/api/grades', async (req, res) => {
+app.get('/api/grades', async (req, res, next) => {
   const sql = `
   SELECT *
     FROM "grades";
@@ -19,14 +19,14 @@ app.get('/api/grades', async (req, res) => {
   try {
     const result = await db.query(sql);
     res.json(result.rows);
-  }
+  };
   catch (err) {
     console.log(err.stack);
     res.status(500).json('An unexpected error occured.');
-  }
+  };
 });
 
-app.post('/api/grades', async (req, res) => {
+app.post('/api/grades', async (req, res, next) => {
   const { name, course, score } = req.body;
   if (!name || !course || !score) {
     res.status(400).json({
@@ -56,7 +56,7 @@ app.post('/api/grades', async (req, res) => {
   }
 })
 
-app.put('/api/grades/:gradeId', async (req, res) => {
+app.put('/api/grades/:gradeId', async (req, res, next) => {
   const { gradeId } = req.params;
   const { name, course, score } = req.body;
   if (!gradeId || isNaN(Number(gradeId)) || gradeId < 0) {
@@ -100,7 +100,7 @@ app.put('/api/grades/:gradeId', async (req, res) => {
   }
 })
 
-app.delete('/api/grades/:gradeId', async (req, res) => {
+app.delete('/api/grades/:gradeId', async (req, res, next) => {
   const { gradeId } = req.params;
   if (!gradeId || isNaN(Number(gradeId)) || gradeId < 0) {
     res.status(400).json({
